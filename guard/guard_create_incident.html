@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SecureComm · Crear Incidente</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+
+  <main class="container py-5">
+    <div class="card shadow-lg" style="background:#0A3D62; border-radius:14px; max-width:650px; margin:auto;">
+      <div class="card-body">
+        <h4 class="text-white mb-3" id="tituloForm">Nuevo Incidente</h4>
+        <form id="formIncidente">
+          <input type="hidden" id="incidenteId">
+
+          <div class="mb-3">
+            <label for="titulo" class="form-label text-white">Título del incidente</label>
+            <input type="text" class="form-control" id="titulo" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="descripcion" class="form-label text-white">Descripción</label>
+            <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="puesto" class="form-label text-white">Puesto o ubicación</label>
+            <input type="text" class="form-control" id="puesto" placeholder="Ej: Entrada principal o ID Contrato" required>
+          </div>
+
+          <div class="text-end">
+            <a href="guard_list_incidents.html" class="btn btn-outline-light btn-sm">Cancelar</a>
+            <button type="submit" class="btn btn-light btn-sm">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div class="text-center text-secondary py-3">
+    <small>SecureComm © 2025</small>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/guard_incidents.js"></script>
+</body>
+</html>

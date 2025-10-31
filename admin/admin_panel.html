@@ -1,0 +1,54 @@
+<!-- admin_paneL -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureComm · Panel Admin</title>
+  <link rel="stylesheet" href="../css/panel_admin.css">
+</head>
+<body>
+  <div class="panel-container">
+    <div class="panel-card">
+      <header class="panel-header">
+        <img src="../img/logo.png" alt="SecureComm" class="panel-logo">
+        <div>
+          <h1>SecureComm</h1>
+          <p>Panel del Administrador</p>
+        </div>
+        <a href="../index.html" class="btn btn-outline-light btn-sm">Cerrar sesión</a>
+      </header>
+
+      <main class="panel-content">
+        <section class="panel-section">
+          <h2>Usuarios</h2>
+          <p>Gestiona cuentas de administradores y guardas.</p>
+          <div class="button-group">
+            <a href="admin_list_users.html" class="btn">Lista de usuarios</a>
+            <a href="admin_create_user.html" class="btn">Crear usuario</a>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Reportes</h2>
+          <p>Visualizar y exportar reportes.</p>
+          <div class="button-group">
+            <a href="../admin/admin_list_incidents.html" class="btn">Ver reportes</a>
+          </div>
+        </section>
+
+        <section class="panel-section">
+          <h2>Estado del sistema</h2>
+          <p>Usuarios registrados: <span id="userCount">1</span></p>
+        </section>
+      </main>
+
+      <footer class="panel-footer">
+        SecureComm © 2025 - Todos los derechos reservados
+      </footer>
+    </div>
+  </div>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

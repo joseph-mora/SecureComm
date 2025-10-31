@@ -1,0 +1,125 @@
+/* === Estructura general para ocupar toda la pantalla === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que el contenedor principal crezca y el footer quede abajo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* El main ocupa todo el espacio disponible */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente si hay poco contenido */
+}
+
+/* Footer siempre al fondo */
+footer {
+  background-color: #0a253e;
+  color: #a9bcd4;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+
+
+/* === Ajustes de diseño responsivo para pantallas grandes === */
+@media (min-width: 992px) {
+  main.container {
+    max-width: 900px; /* centrar el contenido */
+    margin: 0 auto;
+  }
+
+  .card {
+    border-radius: 16px;
+    padding: 20px 25px;
+  }
+
+  .card-body {
+    padding: 2rem 2.5rem;
+  }
+
+  table.table {
+    font-size: 0.95rem;
+    border-collapse: separate;
+    border-spacing: 0 6px;
+  }
+
+  table.table th, 
+  table.table td {
+    vertical-align: middle !important;
+    white-space: nowrap;
+  }
+
+  table.table td:nth-child(3) {
+    white-space: normal; /* permite texto largo solo en descripción */
+    max-width: 280px;
+  }
+
+  .d-flex.align-items-center.mb-3 {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+}
+
+/* === Ajustes generales para todos los tamaños === */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+table.table th {
+  background-color: rgba(255,255,255,0.08);
+  color: #cfe6ff;
+  border: none;
+}
+
+table.table td {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.btn {
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* === Modo compacto para pantallas pequeñas === */
+@media (max-width: 576px) {
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    background-color: #0A3D62;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  table tbody td {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    border: none;
+  }
+
+  table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #9cc9ff;
+  }
+}
