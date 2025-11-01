@@ -35,6 +35,21 @@ function inicializarUsuarios() {
     usuarios.push(adminDefault);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
     console.log('Usuario administrador por defecto creado ✅');
+
+    const guardDefault = {
+      id: generarIdSecuencial(),
+      cedula: '987654321',
+      nombre: 'Guarda General',
+      correo: 'guard@securecomm.com',
+      cliente: 'SecureComm',
+      rol: 'Guarda',
+      password: 'A15B58C'
+    };
+
+    usuarios.push(guardDefault);
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    console.log('Usuario guarda por defecto creado ✅');
+  }
   }
 }
 
