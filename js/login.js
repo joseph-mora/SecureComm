@@ -32,10 +32,6 @@ function inicializarUsuarios() {
       password: 'A15B58C'
     };
 
-    usuarios.push(adminDefault);
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    console.log('Usuario administrador por defecto creado ✅');
-
     const guardDefault = {
       id: generarIdSecuencial(),
       cedula: '987654321',
@@ -46,9 +42,9 @@ function inicializarUsuarios() {
       password: 'A15B58C'
     };
 
-    usuarios.push(guardDefault);
+    usuarios.push(adminDefault, guardDefault);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
-    console.log('Usuario guarda por defecto creado ✅');
+    console.log('Usuarios por defecto creado ✅');
   }
 }
 
