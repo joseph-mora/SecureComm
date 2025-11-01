@@ -29,7 +29,7 @@ function inicializarUsuarios() {
       correo: 'admin@securecomm.com',
       cliente: 'SecureComm',
       rol: 'Administrador',
-      password: '12345'
+      password: 'A15B58C'
     };
 
     usuarios.push(adminDefault);
