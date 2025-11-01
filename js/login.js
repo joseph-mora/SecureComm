@@ -50,7 +50,6 @@ function inicializarUsuarios() {
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
     console.log('Usuario guarda por defecto creado ✅');
   }
-  }
 }
 
 // Ejecutar al cargar el script
